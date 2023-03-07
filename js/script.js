@@ -5,6 +5,17 @@ const fnumber = 21;
 
 console.log(fname, fsurname, fcolor);
 
-let psw = document.getElementById("app").innerHTML = `
-    <h1>${fname}${fsurname}${fcolor}${fnumber}</h1>
+
+if (isNaN(fname) && isNaN(fsurname) && isNaN(fcolor)){
+    let psw = document.getElementById("pswGenerated").innerHTML = `
+    <h2 class="text-white fw-bold title-gradient">La tua password: </h2>
+    <h1 class="text-white fw-bold"> ${fname}${fsurname}${fcolor}${fnumber} </h1>
 `;
+}
+else{
+    let psw = document.getElementById("pswGenerated").innerHTML = `
+    <h2 class="text-white fw-bold title-gradient">La tua password: </h2>
+    <h1 class="text-white fw-bold">Inserire dati correttamente. Ricarica la pagina.</h1>
+`;
+}
+
